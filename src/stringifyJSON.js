@@ -28,7 +28,7 @@ var stringifyJSON = function(obj) {
         _.each(obj, function(value, key){
             var left = stringifyJSON(key);
             var right = stringifyJSON(value);
-            if(typeof(right) !== undefined){
+            if(right !== undefined){
                 output = output + left + ":" + right + ",";   
             }
         });
